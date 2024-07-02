@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio005</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <Header>
+        <nav>
+            <h1>Ejercicio02</h1>
+            <div class="datos">
+                <p class="nombre">Alberto</p>
+                <p class="horario">Tarde</p>
+            </div>
+        </nav>
+    </Header>
+    <main>
+        <div class="contenedor">
+            <div class="contenido">
+                <label style="font-size: x-large;font-weight: bold;">Nombre:</label>
+                <div id="nombre">
+    
+                </div><br>
+                <label style="font-size: x-large;font-weight: bold;">Altura:</label>
+                <div id="altura">
+            
+                </div><br>
+                <label style="font-size: x-large;font-weight: bold;">peso:</label>
+                <div id="peso">
+            
+                </div><br>
+                <label style="font-size: x-large;font-weight: bold;">IMC:</label>
+                <div id="imc">
+            
+                </div>
+                <h2 id="dato"></h2>
+            </div>
+        </div>
+        
+    </main>
+  
+<script src="calculadorIMC.js"></script>
+    <script>
+        var nombre=prompt('Cual es tu nombre', 'escribelo aqui');
+        var altura=prompt('Cual es tu altura en cm', 'escribelo aqui');
+        var peso=prompt('Cual es tu peso en Kg', 'escribelo aqui');
+        kilos=parseFloat(peso);
+        metros=parseFloat(altura);
+       
+
+        
+        document.getElementById('nombre').innerHTML=nombre;
+        document.getElementById('altura').innerHTML=altura;
+        document.getElementById('peso').innerHTML=peso;
+        
+        document.getElementById('imc').innerHTML=calcularIMC(kilos,metros) ;
+
+        if(calcularIMC(kilos,metros)<=18){
+            document.getElementById('dato').innerHTML='Come mas estas muy flaco';
+        }else if(calcularIMC(kilos,metros)>=28){
+            document.getElementById('dato').innerHTML='Deja de traragar que vas a explotar';
+        }else{
+            document.getElementById('dato').innerHTML='Sigue asi mozalbete';
+        }
+        
+        
+    </script>
+</body>
+</html>
