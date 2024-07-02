@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <h1 id="titulo"> Hola</h1>
+    <script>
+        let nombre= prompt('Cuales tu nombre?')
+        let resouesta =confirm("Quieres Dormir "+nombre+'?');
+        document.write('Te llamas ', nombre);
+if(resouesta){
+    document.getElementById('titulo').innerHTML='Pues no se que haces aqui '+nombre;
+}else{
+    document.getElementById('titulo').innerHTML='Pues sigue trasteando '+nombre;
+
+    
+}
+        
+    </script>
+</body>
+</html>
