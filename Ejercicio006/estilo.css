@@ -10,17 +10,27 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  gap: 5px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.22);
+}
+.titulo{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding-right: 450px;
+
 }
 .resultado{
     display: flex;
     flex-direction: column;
     box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.22);
     border-radius: 10px;
-    min-height: 50px;
+    min-height: 150px;
+    min-width: 200px;
     padding: 10px;
     background-color: rgb(244, 241, 241);
     align-content: flex-start ;
@@ -58,3 +68,12 @@ button{
 button:hover{
     background-color:rgb(100, 201, 204);;
 }
+input{
+  padding: 5px;
+}
+@media (max-width: 600px) {
+  .contenido{
+    flex-direction: column;
+  }
+} 
+  
