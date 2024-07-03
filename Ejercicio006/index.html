@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CalculadoraIMC</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" />
     <script src="calculadorIMC.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main>
+      <h1>Calcula tu IMC</h1>
+      <div class="contenido">
         <div class="contenedor">
-            <input type="text" name="" id="iNombre">
-            <input type="text" name="" id="iNombre">
-            <input type="text" name="" id="iNombre">
-            <button></button>
+          <div class="datos">
+            <label for="">Nombre:</label>
+            <input type="text" name="" id="iNombre" placeholder="Nombre"/>
+          </div>
+          <div class="datos">
+            <label for="">Peso Kg:</label>
+            <input type="number" name="" id="iPeso" placeholder="Kg"/>
+          </div>
+          <div class="datos">
+            <label for="">Altura cm:</label>
+            <input type="number" name="" id="iAltura" placeholder="Altura en cm"/>
+          </div>
+
+          <button>Calcular</button>
         </div>
+        <div class="contenedor2">
+            <h1>Resultado:</h1>
+            <div class="resultado">
+          
+          <div class="imc"></div>
+        </div>
+        </div>
+        
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>
