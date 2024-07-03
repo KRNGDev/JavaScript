@@ -56,13 +56,12 @@ main {
     border-radius: 10px;
     padding: 10px;
 }
-.contenedor2{
-    
-}
+
 button{
     background-color:cadetblue;
     border-radius: 5px;
-    padding: 5px;
+    font-size: larger;
+    padding: 10px;
     margin: 10px ;
 }
 button:hover{
@@ -70,10 +69,14 @@ button:hover{
 }
 input{
   padding: 5px;
+  border-radius: 8px;
 }
 @media (max-width: 600px) {
   .contenido{
     flex-direction: column;
+  }
+  body{
+    padding: 20px;
   }
 } 
   

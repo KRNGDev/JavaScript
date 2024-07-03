@@ -66,11 +66,12 @@
         var nombre = document.getElementById("iNombre").value;
         var peso = document.getElementById("iPeso").value;
         var altura = document.getElementById("iAltura").value;
+        var imc= calcularIMC(peso, altura);
 
         document.getElementById("imc").innerHTML =
-          nombre + " Tienes un  Imc " + calcularIMC(peso, altura);
+          nombre + " Tienes un  Imc " + imc;
         document.getElementById("consejo").innerHTML = resultado(
-          calcularIMC(peso, altura)
+          imc
         );
       }
     </script>
