@@ -14,11 +14,11 @@
         <div class="contenedor">
           <div class="datos">
             <label for="">Nombre:</label>
-            <input type="text" name="" id="iNombre" placeholder="Nombre" />
+            <input type="text" name="" id="iNombre" placeholder="Nombre" required="required"/>
           </div>
           <div class="datos">
             <label for="">Peso Kg:</label>
-            <input type="number" name="" id="iPeso" placeholder="Kg" />
+            <input type="number" name="" id="iPeso" placeholder="Kg" required="required"/>
           </div>
           <div class="datos">
             <label for="">Altura cm:</label>
@@ -26,19 +26,32 @@
               type="number"
               name=""
               id="iAltura"
-              placeholder="Altura en cm"
+              placeholder="Altura en cm" required="required"
             />
           </div>
 
-          <button>Calcular</button>
+          <button onclick="mandarvalores()">Calcular</button>
         </div>
         <div class="contenedor2">
           <h1>Resultado:</h1>
           <div class="resultado">
-            <div class="imc"></div>
+            <h3 id="imc"></h3>
+            <h2 id="consejo"></h2>
           </div>
         </div>
       </div>
     </main>
+
+    <script>
+        function mandarvalores(){
+            var nombre=document.getElementById('iNombre').value;
+            var peso=document.getElementById('iPeso').value;
+            var altura=document.getElementById('iAltura').value;
+            
+
+            document.getElementById('imc').innerHTML=nombre+' Tienes un  Imc '+calcularIMC(peso,altura);
+            document.getElementById('consejo').innerHTML=resultado(calcularIMC(peso,altura));
+        }
+    </script>
   </body>
 </html>
