@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fornmulario</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <div id="emailValido"></div>
+
+    <form action="">
+      <label for="">Nombre</label>
+      <input type="text" id="nombre" placeholder="Escriba aqui su nombre" />
+      <label for="">Email</label>
+      <input type="email" id="email" placeholder="Correo@correo.com" />
+      <label for="">Password</label>
+      <input type="password" name="" id="password" />
+      <button onclick="init()">Enviar</button>
+    </form>
+    
+  </body>
+</html>
+<script>
+  let nombre = document.getElementById("nombre").value;
+
+  let password = document.getElementById("password").value;
+
+  function init() {
+    validarEmail();
+    validarPassword();
+  }
+
+  function validarEmail() {
+    let email = document.getElementById("email").value;
+    let nuevoText = email.split("");
+    let valido = false;
+    let validoPunto = false;
+    console.log(nuevoText);
+
+    if (nuevoText.length < 5) return;
+    for (let i = 0; i < nuevoText.length; i++) {
+      if (nuevoText[i] == "@") {
+        valido = true;
+      } else if (nuevoText[i] == ".") {
+        validoPunto = true;
+      }
+    }
+    console.log(valido);
+    if (valido && validoPunto) {
+      document.getElementById("emailValido").innerHTML = "Email correcto";
+    } else {
+      document.getElementById("emailValido").innerHTML = "Ingrese email valido";
+    }
+  }
+  function validarPassword(texto) {}
+</script>
