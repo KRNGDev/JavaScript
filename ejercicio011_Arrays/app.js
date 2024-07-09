@@ -1,32 +1,26 @@
-let ancho=200;
-function aumentar(){
-    let caratulas = document.getElementsByClassName("cover");
-    console.log(caratulas.length);
-       
-       
-        ancho++;
-    Array.from(caratulas).forEach(caratula => {
-       
-        caratula.style.width=`${ancho}px`;
-    });
+let ancho = 200;
 
-console.log(ancho);
+
+function aumentar() {
+  let caratulas = document.getElementsByClassName("cover");
+  console.log(caratulas.length);
+
+  ancho++;
+  Array.from(caratulas).forEach((caratula) => {
+    caratula.style.width = `${ancho}px`;
+  });
+
+  console.log(ancho);
 }
 
+document.querySelector("#botonMenos").addEventListener("click", function () {
+  let caratulas = document.getElementsByClassName("cover");
+  console.log(caratulas.length);
 
-document.querySelector("#botonMenos").addEventListener("click", function(){
+  ancho--;
+  Array.from(caratulas).forEach((caratula) => {
+    caratula.style.width = `${ancho}px`;
+  });
 
-    let caratulas = document.getElementsByClassName("cover");
-    console.log(caratulas.length);
-       
-       
-        ancho--;
-    Array.from(caratulas).forEach(caratula => {
-       
-        caratula.style.width=`${ancho}px`;
-    });
-
-console.log(ancho);
-
-
+  console.log(ancho);
 });
