@@ -1,0 +1,12 @@
+.tarea{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    
+}
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
+}
