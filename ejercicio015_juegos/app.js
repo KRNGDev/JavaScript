@@ -8,7 +8,7 @@ let juegos = [];
 let juegosGuardados= localStorage.getItem("juegos");
 if(juegosGuardados!=null){
     juegos= JSON.parse(juegosGuardados);
-    
+    generarListaJuegos();
 }
 //agregamos un listener al boton
 document.querySelector("#bAgregar").addEventListener("click", (event) => {
