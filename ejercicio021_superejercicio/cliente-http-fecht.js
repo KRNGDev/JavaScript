@@ -16,7 +16,7 @@ function mostrarDatos(datos){
         let card= ` <div class="juego">
             <img src="${juego.background_image}"">
             <div class="titulo">${juego.name}</div>
-            <div class="genero">${juego.genres[0].name}</div>
+            <div class="genero">${juego.genres[0]?.name}</div>
             <div class="plataforma">${juego.plataformas}</div>
             <div class="desarrollador">${juego.desarrollador}</div>
             <div class="anno">${juego.Year}</div>
