@@ -8,3 +8,24 @@
 #marciano1 img {
   width: 100%;
 }
+
+#marciano2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  top: 1vh;
+}
+#marciano2 img {
+  width: 100%;
+}
+#marciano3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  top: 1vh;
+}
+#marciano3 img {
+  width: 100%;
+}
