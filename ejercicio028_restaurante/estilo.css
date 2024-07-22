@@ -1,0 +1,33 @@
+#restaurantes {
+  width: 100%;
+}
+
+.restaurante {
+  width: 98%;
+  height: 100px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  padding: 1%;
+  transition: all 0.25s;
+}
+
+.restaurante:hover {
+  border-color: rgba(128, 128, 128, 0.136);
+  box-shadow: 2px 2px rgb(200, 200, 200);
+}
+
+.imagen {
+  float: left;
+}
+
+.descripcion {
+  margin: 10px;
+  float: left;
+}
+
+.imagen img {
+  height: 100px;
+  border-radius: 10px;
+}

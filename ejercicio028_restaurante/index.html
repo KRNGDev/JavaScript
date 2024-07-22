@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ess">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div>
+      <input type="text" id="iFiltro" placeholder="Filtrar" />
+    </div>
+    <div id="restaurantes"></div>
+  </body>
+  <script src="scripts/generadorFilas.js"></script>
+  <script src="scripts/http-client.js"></script>
+</html>
+<script>
+  var arrayRestaurantes;
+
+  //Filtra por nombre
+  document.querySelector("#iFiltro").addEventListener("keyup", () => {
+    console.log("p1");
+    let texto = document.querySelector("#iFiltro").value;
+    let restaurantesFiltrados = arrayRestaurantes.filter((restaurante) => {
+      return restaurante.nombre.includes(texto);
+    });
+    document.querySelector("#restaurantes").innerHTML = "";
+    restaurantesFiltrados.forEach((restaurante) => {
+      crearFila(
+        restaurante.imagen,
+        restaurante.nombre,
+        restaurante.estilo,
+        restaurante.precio
+      );
+    });
+  });
+
+  //Conexion con la api
+  doGetHTTPRequest(
+    "http://127.0.0.1",
+    "5500",
+    "ejercicio028_restaurante/restaurantes.json",
+    procesarRestaurantes,
+    procesarError
+  );
+
+  //Gestion de los datos JSON
+
+  function procesarRestaurantes(texto) {
+    let objetoServidor = JSON.parse(texto);
+    arrayRestaurantes = objetoServidor.restaurantes;
+    arrayRestaurantes.forEach((restaurante) => {
+      crearFila(
+        restaurante.imagen,
+        restaurante.nombre,
+        restaurante.estilo,
+        restaurante.precio
+      );
+    });
+  }
+
+  function procesarError(err) {
+    console.log(err);
+  }
+</script>

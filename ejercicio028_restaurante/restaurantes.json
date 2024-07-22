@@ -1,0 +1,22 @@
+{
+  "restaurantes": [
+    {
+      "imagen": "imagen/r1.jpg",
+      "nombre": "Burger King",
+      "estilo": "tex-mex",
+      "precio": 30
+    },
+    {
+      "imagen": "imagen/r2.jpg",
+      "nombre": "Yatokomo",
+      "estilo": "Japones",
+      "precio": 40
+    },
+    {
+      "imagen": "imagen/r3.jpg",
+      "nombre": "Apu Bar",
+      "estilo": "Indu",
+      "precio": 25
+    }
+  ]
+}
